@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: InTaskIcons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 2d2a8283297ec2145995167477834885, type: 3}
+    - {fileID: -6056156730852147791, guid: ec755d3f2388148d180259ec0596f3a2, type: 3}
+    - {fileID: -8003856729566639458, guid: ec755d3f2388148d180259ec0596f3a2, type: 3}
+    - {fileID: 2800000, guid: b80240d11caaaf2489771cac832c3550, type: 3}
+    - {fileID: 4741969430293220327, guid: 6f428bfbf8ef85145ae9e1eee99d6b48, type: 3}
+    - {fileID: 2800000, guid: 6b03f9cfc5b06c64e800ba6078beb7af, type: 3}
+    totalSpriteSurfaceArea: 1437287
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b80240d11caaaf2489771cac832c3550, type: 3}
+  - {fileID: 21300000, guid: 2d2a8283297ec2145995167477834885, type: 3}
+  - {fileID: 4741969430293220327, guid: 6f428bfbf8ef85145ae9e1eee99d6b48, type: 3}
+  - {fileID: -8003856729566639458, guid: ec755d3f2388148d180259ec0596f3a2, type: 3}
+  - {fileID: -6056156730852147791, guid: ec755d3f2388148d180259ec0596f3a2, type: 3}
+  - {fileID: 21300000, guid: 6b03f9cfc5b06c64e800ba6078beb7af, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ip9rvv55
+  - Panel
+  - 40896-O2SMHN_15
+  - fluid-modern-gradient-background-_3
+  - fluid-modern-gradient-background-_0
+  - clock_graphic
+  m_RenderDataMap: {}
+  m_Tag: InTaskIcons
+  m_IsVariant: 0
