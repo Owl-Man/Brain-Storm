@@ -50,22 +50,22 @@ public class MenuButtons : MonoBehaviour
 
     [Header ("State")]
     public bool isInMainMenu = true;
-    public bool isInSelectModePanel = false;
-    public bool isInSelectDifferentModePanel = false;
-    public bool isInSelectLevelPanel = false;
-    public bool isInSelectChallengePanel = false;
-    public bool isInOpisanieForChallengePanel = false;
-    public bool isInSettingsPanel = false;
-    public bool isInBookPanel = false;
-    public bool isInQuadUravBookPanel = false;
-    public bool isInTeoremaVietaPanel = false;
-    public bool isInProchentPanel = false;
-    public bool isInProfilPanel = false;
-    public bool isInSvoistvaPanel = false;
-    public bool isInSinCosTanPanel = false;
-    public bool isInShopPanel = false;    
-    public bool isInWarningForExitPanel = false;
-    public bool isInHelpForZvaniesPanel = false;
+    private bool isInSelectModePanel = false;
+    private bool isInSelectDifferentModePanel = false;
+    private bool isInSelectLevelPanel = false;
+    private bool isInSelectChallengePanel = false;
+    private bool isInOpisanieForChallengePanel = false;
+    private bool isInSettingsPanel = false;
+    private bool isInBookPanel = false;
+    private bool isInQuadUravBookPanel = false;
+    private bool isInTeoremaVietaPanel = false;
+    private bool isInProchentPanel = false;
+    private bool isInProfilPanel = false;
+    private bool isInSvoistvaPanel = false;
+    private bool isInSinCosTanPanel = false;
+    private bool isInShopPanel = false;    
+    private bool isInWarningForExitPanel = false;
+    private bool isInHelpForZvaniesPanel = false;
 
     [Header ("Other")]
     public bool isBulletChallengeMode = false;
@@ -120,6 +120,11 @@ public class MenuButtons : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape)) //back button press
             {
+                if (isInWarningForExitPanel == true) 
+                {
+                    OnNoForExitButtonClick();
+                }
+
                 if (isInMainMenu == true) 
                 {
                     OnExitButtonClick();
@@ -190,14 +195,14 @@ public class MenuButtons : MonoBehaviour
                     OnBackForSinCosTanButtonClick();
                 }
 
-                if (isInWarningForExitPanel == true) 
-                {
-                    OnNoForExitButtonClick();
-                }
-
                 if (isInHelpForZvaniesPanel == true) 
                 {
                     OnBackForHelpZvaniesButtonClick();
+                }
+
+                if (isInShopPanel == true) 
+                {
+                    OnBackForShopButtonClick();
                 }
             }
 

@@ -26,11 +26,6 @@ public class LevelsTaskGenerate : MonoBehaviour
 
     public bool isDieByTime;
 
-    public bool ispaused = false;
-
-    int timeLeftOnPause = 0;
-
-
     public Transform effectpoint;
     public Transform effectpoint_gameover;
     public Transform effectpoint_timeleft;
@@ -110,26 +105,6 @@ public class LevelsTaskGenerate : MonoBehaviour
         }
 
         show_time.text = mySlider.value.ToString();
-    }
-
-    void OnApplicationFocus(bool hasFocus) 
-    {
-        ispaused = !hasFocus;
-
-        if (ispaused == false) 
-        {
-            timeLeft = timeLeft - timeLeftOnPause;
-        }
-    }
-
-    void OnApplicationPause (bool pauseStatus) 
-    {
-        ispaused = pauseStatus;
-
-        if (ispaused == true) 
-        {
-            timeLeftOnPause++;
-        }
     }
 
     public void ChooseLevelTaskGenerate() 

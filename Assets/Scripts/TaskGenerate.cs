@@ -64,10 +64,6 @@ public class TaskGenerate : MonoBehaviour
 
     int MaxScore;
 
-    bool ispaused = false;
-
-    int timeLeftOnPause = 0;
-
     int CurrentUser;
 
     bool isProchenTask = false;
@@ -90,26 +86,6 @@ public class TaskGenerate : MonoBehaviour
         MyDataBaseConnection.ExecuteQueryWithoutAnswer($"UPDATE PlayerStats SET AllPlaysCount = '"+all_plays_count+"' WHERE id = '"+CurrentUser+"';");
 
         ChooseDifferentMode();
-    }
-
-    void OnApplicationFocus(bool hasFocus) 
-    {
-        ispaused = !hasFocus;
-
-        if (ispaused == false) 
-        {
-            timeLeft -= timeLeftOnPause;
-        }
-    }
-
-    void OnApplicationPause(bool pauseStatus) 
-    {
-        ispaused = pauseStatus;
-
-        if (ispaused == true) 
-        {
-            timeLeftOnPause++;
-        }
     }
 
 
@@ -217,49 +193,17 @@ public class TaskGenerate : MonoBehaviour
             Show_time.text = timeLeft.ToString();
         }
 
-        if (isChangePosition == true) 
-        {
-            int statePositionOfAnswers = UnityEngine.Random.Range(1, 6);
 
-            int speed = 5;
+        //Meshalka challenge
+        
+        //if (isChangePosition == true) 
+        //{
+        //    int statePositionOfAnswers = UnityEngine.Random.Range(1, 6);
 
-            if (statePositionOfAnswers == 1) 
-            {
-                answer_panel1.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, 47.76002f, 0), Time.deltaTime * speed);
-                answer_panel2.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -339f, 0), Time.deltaTime * speed);
-                answer_panel3.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -750.24f, 0), Time.deltaTime * speed);
-            }
+        //    int speed = 5;
 
-            if (statePositionOfAnswers == 2) 
-            {
-                answer_panel1.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -339f, 0), Time.deltaTime * speed);
-                answer_panel2.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, 47.76002f, 0), Time.deltaTime * speed);
-                answer_panel3.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -750.24f, 0), Time.deltaTime * speed);
-            }
-
-            if (statePositionOfAnswers == 3) 
-            {
-                answer_panel1.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -339f, 0), Time.deltaTime * speed);
-                answer_panel2.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -750.24f, 0), Time.deltaTime * speed);
-                answer_panel3.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, 47.76002f, 0), Time.deltaTime * speed);
-            }
-
-            if (statePositionOfAnswers == 4) 
-            {
-                answer_panel1.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, 47.76002f, 0), Time.deltaTime * speed);
-                answer_panel2.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -750.24f, 0), Time.deltaTime * speed);
-                answer_panel3.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -339f, 0), Time.deltaTime * speed);
-            }
-
-            if (statePositionOfAnswers == 5) 
-            {
-                answer_panel1.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -750.24f, 0), Time.deltaTime * speed);
-                answer_panel2.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, -339f, 0), Time.deltaTime * speed);
-                answer_panel3.transform.position = Vector3.Lerp(answer_panel1.transform.position, new Vector3(3.84f, 47.76002f, 0), Time.deltaTime * speed);
-            }
-
-            isChangePosition = false;
-        }
+        //    isChangePosition = false;
+        //}
     }
 
 

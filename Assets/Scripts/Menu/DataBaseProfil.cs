@@ -119,15 +119,17 @@ public class DataBaseProfil : MonoBehaviour
             first_start_panel.SetActive(true);
 
             PlayerPrefs.SetInt("CurrentUser", 1);
-            PlayerPrefs.SetInt("AllUsers", 1);        
+            PlayerPrefs.SetInt("AllUsers", 1);
         }
 
         else
         {
-            AllUsersUpdate();
+            CurrentUser = PlayerPrefs.GetInt("CurrentUser");
+            CountOfAllUsers = PlayerPrefs.GetInt("AllUsers");
 
             if (CurrentUser == 0) 
             {
+                AllUsersUpdate();
                 EffectOfThunder.SetActive(false);
                 user_list_panel.SetActive(true);
             }
