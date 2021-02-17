@@ -110,6 +110,8 @@ public class DataBaseProfil : MonoBehaviour
     public InputField NewUserYearsOldEnter;
     public InputField NewUserClassEnter;
 
+//Тот кто открыл этот скрипт даун
+
     private void Start() 
     {
 
