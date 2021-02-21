@@ -3144,8 +3144,8 @@ RectTransform:
   m_Children:
   - {fileID: 1529304833}
   - {fileID: 1531623504}
-  m_Father: {fileID: 2042231472}
-  m_RootOrder: 4
+  m_Father: {fileID: 1624936626}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5234,7 +5234,7 @@ RectTransform:
   - {fileID: 741270847}
   - {fileID: 2073973398}
   m_Father: {fileID: 2042231472}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5881,7 +5881,7 @@ RectTransform:
   - {fileID: 1311140614}
   - {fileID: 559607616}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5922,7 +5922,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7403,6 +7403,7 @@ MonoBehaviour:
   YearsOldExitObject: {fileID: 432544354}
   ClassExitObject: {fileID: 1491829619}
   GenderExitObject: {fileID: 1062629484}
+  menuButtons: {fileID: 519420030}
   NamePlayerEnter: {fileID: 1869605667}
   EditNamePlayerEnter: {fileID: 1746588863}
   YearsOldEnter: {fileID: 2132603970}
@@ -8052,7 +8053,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -10934,7 +10935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -21035,7 +21036,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -25047,7 +25048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -32506,8 +32507,9 @@ RectTransform:
   - {fileID: 1235367469}
   - {fileID: 1129367799}
   - {fileID: 1485595080}
+  - {fileID: 122351159}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32548,7 +32550,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -34636,7 +34638,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -35835,7 +35837,7 @@ RectTransform:
   - {fileID: 1944882524}
   - {fileID: 2147257976}
   m_Father: {fileID: 2042231472}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -37916,7 +37918,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -38897,7 +38899,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -39120,7 +39122,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32000
+  m_SortingOrder: 32001
   m_Sprite: {fileID: 21300000, guid: 1c6ad99dc08b2ee4f9e67e438ae2d885, type: 3}
   m_Color: {r: 0.32980368, g: 1, b: 0.26415092, a: 1}
   m_FlipX: 0
@@ -40544,7 +40546,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -40586,11 +40588,10 @@ RectTransform:
   - {fileID: 1979060969}
   - {fileID: 282082191}
   - {fileID: 10930557}
-  - {fileID: 122351159}
   - {fileID: 1813049867}
   - {fileID: 213801286}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

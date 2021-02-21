@@ -95,6 +95,8 @@ public class DataBaseProfil : MonoBehaviour
     int challenges_finished;
     int all_plays_count;
 
+    public MenuButtons menuButtons;
+
     int CurrentUser;
     int AccountThatDeletingNow;
     int CountOfAllUsers;
@@ -142,7 +144,7 @@ public class DataBaseProfil : MonoBehaviour
 //  <----------------------------------------------- NEW ACCOUNT FOR USER! --------------------------------------------->
     public void OnAcceptNewUserButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         nickname = NewUserNameEner.text;
 
         int lengthNickname = nickname.Length;
@@ -173,6 +175,7 @@ public class DataBaseProfil : MonoBehaviour
 
         else 
         {
+            new_user_panel.SetActive(false);
             WaitForLoadPanelSystem();
             
             try
@@ -198,21 +201,21 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnNewUserButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         user_list_panel.SetActive(false);
         new_user_panel.SetActive(true);
     }
 
     public void OnBackForNewUserButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         user_list_panel.SetActive(true);
         new_user_panel.SetActive(false);
     }
 
     public void OnExitFromAccountButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("CurrentUser", 0);
         StartCoroutine(LoadLevel("Menu"));
     }
@@ -220,7 +223,7 @@ public class DataBaseProfil : MonoBehaviour
 //  <----------------------------------------------- FIRST ACCOUNT FOR USER! --------------------------------------------->
     public void OnAcceptDataPlayerButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         nickname = NamePlayerEnter.text;
 
         int lengthNickname = nickname.Length;
@@ -251,6 +254,7 @@ public class DataBaseProfil : MonoBehaviour
 
         else 
         {
+            menuButtons.first_enter_panel.SetActive(false);
             WaitForLoadPanelSystem();
 
             try
@@ -274,7 +278,7 @@ public class DataBaseProfil : MonoBehaviour
 //  <----------------------------------------------- EDIT ACCOUNT FOR USER! --------------------------------------------->
     public void OnAcceptEditDataPlayerButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         CurrentUser = PlayerPrefs.GetInt("CurrentUser");
 
         int lengthNickname = nickname.Length;
@@ -305,6 +309,7 @@ public class DataBaseProfil : MonoBehaviour
 
         else 
         {
+            menuButtons.profil_panel.SetActive(false);
             WaitForLoadPanelSystem();
 
             try 
@@ -344,7 +349,7 @@ public class DataBaseProfil : MonoBehaviour
     
     public void OnEditNameButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         edit_name_panel.SetActive(true);
         edit_button.SetActive(false);
         error_name_player_edit_panel.SetActive(false);
@@ -355,20 +360,20 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnNoEditNameButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         edit_name_panel.SetActive(false);
         edit_button.SetActive(true);
     }
 
     public void OnWarningResetFromProfilButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         resetpanel.SetActive(true);
     }
 
     public void OnResetFromProfilButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("first_start", 0);
 
         MyDataBaseConnection.ExecuteQueryWithoutAnswer($"DELETE FROM PlayerStats;");
@@ -387,7 +392,7 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnNoResetFromProfilButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         resetpanel.SetActive(false);
     }
 
@@ -566,7 +571,7 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnMenGenderButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 1;
         ManGenderIcon.SetActive(true);
         WomenGenderIcon.SetActive(false);
@@ -574,7 +579,7 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnWomenGenderButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 2;
         WomenGenderIcon.SetActive(true);
         ManGenderIcon.SetActive(false);
@@ -582,7 +587,7 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnMenGenderForEditButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 1;
         ManGenderForEditIcon.SetActive(true);
         WomenGenderForEditIcon.SetActive(false);
@@ -590,7 +595,7 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnWomenGenderForEditButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 2;
         ManGenderForEditIcon.SetActive(false);
         WomenGenderForEditIcon.SetActive(true);
@@ -598,15 +603,15 @@ public class DataBaseProfil : MonoBehaviour
 
     public void OnMenGenderForNewUserButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 1;
-        ManGenderForEditIcon.SetActive(true);
-        WomenGenderForEditIcon.SetActive(false);
+        ManGenderForNewUserIcon.SetActive(true);
+        WomenGenderForNewUserIcon.SetActive(false);
     }
 
     public void OnWomenGenderForNewUserButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         is_man_or_women = 2;
         ManGenderForNewUserIcon.SetActive(false);
         WomenGenderForNewUserIcon.SetActive(true);
@@ -614,14 +619,14 @@ public class DataBaseProfil : MonoBehaviour
 
     public void User1ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("CurrentUser", 1);
         StartCoroutine(LoadLevel("Menu"));
     }
 
     public void User2ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("CurrentUser", 2);
         StartCoroutine(LoadLevel("Menu"));
     }
@@ -634,62 +639,62 @@ public class DataBaseProfil : MonoBehaviour
 
     public void User4ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("CurrentUser", 4);
         StartCoroutine(LoadLevel("Menu"));
     }
 
     public void User5ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         PlayerPrefs.SetInt("CurrentUser", 5);
         StartCoroutine(LoadLevel("Menu"));
     }
 
     public void OnDeleteAccount1ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(true);
         AccountThatDeletingNow = 1;
     }
 
     public void OnDeleteAccount2ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(true);
         AccountThatDeletingNow = 2;
     }
 
     public void OnDeleteAccount3ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(true);
         AccountThatDeletingNow = 3;
     }
 
     public void OnDeleteAccount4ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(true);
         AccountThatDeletingNow = 4;
     }
 
     public void OnDeleteAccount5ButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(true);
         AccountThatDeletingNow = 5;
     }
 
     public void OnBackForDeleteAccountButtonClick()
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(false);
     }
 
     public void OnAcceptForDeleteAccountButtonClick() 
     {
-        SoundOfButtonClick();
+        menuButtons.SoundOfButtonClick();
         warning_for_delete_user_panel.SetActive(false);
 
         if (AccountThatDeletingNow == 1) 
@@ -873,16 +878,20 @@ public class DataBaseProfil : MonoBehaviour
 
         CountOfAllUsers--;
         PlayerPrefs.SetInt("AllUsers", CountOfAllUsers);
+
+        AllUsersUpdate();
     }
 
     public void DeleteUser5() 
     {
         MyDataBaseConnection.ExecuteQueryWithoutAnswer($"DELETE FROM PlayerStats WHERE id = {5};");
         MyDataBaseConnection.ExecuteQueryWithoutAnswer($"DELETE FROM IsLevelsFinished WHERE stroka = {5};");
-        MyDataBaseConnection.ExecuteQueryWithoutAnswer($"DELETE FROM Shop WHERE = id {5};");
+        MyDataBaseConnection.ExecuteQueryWithoutAnswer($"DELETE FROM Shop WHERE id = {5};");
 
         CountOfAllUsers--;
         PlayerPrefs.SetInt("AllUsers", CountOfAllUsers);
+
+        AllUsersUpdate();
     }
 
     IEnumerator LoadLevel(string scene) 
@@ -892,12 +901,6 @@ public class DataBaseProfil : MonoBehaviour
         yield return new WaitForSeconds(0.36f);
 
         SceneManager.LoadScene(scene);
-    }
-
-    public void SoundOfButtonClick() 
-    {
-        if (PlayerPrefs.GetInt("isSoundActive") == 1)
-            ButtonSound.Play();
     }
 
     public void AllUsersUpdate() 

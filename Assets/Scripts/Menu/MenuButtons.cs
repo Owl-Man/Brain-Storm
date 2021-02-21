@@ -83,7 +83,7 @@ public class MenuButtons : MonoBehaviour
     public Animator SvoistvaAnim;
     public Animator SinCosTanAnim;
 
-    public float timeforSmoothAnim = 0.4f;
+    public float timeforSmoothAnim = 0.5f;
 
     public GameObject EffectThunder;
 
