@@ -89,39 +89,53 @@ public class Shop : MonoBehaviour
     {
       //<---------------------------------RevivalBonus---------------------------------->
 
-    	if (coins < CostOfRevivalBonus)
-		{
-			RevivalBonusButton.interactable = false;
-		}
-
-		if (isRevivalBonusActive == 1) 
+    	if (isRevivalBonusActive == 1) 
 		{
 			RevivalBonusButton.interactable = false;
 			BuyForRevivalBonusText.text = "Куплено";
 			ObjectCostOfRevivalBonusText.SetActive(false);
 		}
 
+    	if (coins < CostOfRevivalBonus)
+		{
+			RevivalBonusButton.interactable = false;
+		}
+
+		else 
+		{
+			RevivalBonusButton.interactable = true;
+			BuyForRevivalBonusText.text = "Купить за";
+			ObjectCostOfRevivalBonusText.SetActive(true);
+		}
+
       //<------------------------------DoubleCoinsBonus------------------------------------>
 
-        if (coins < CostOfDoubleBonus) 
-        {
-        	DoubleBonusButton.interactable = false;
-        }
-
-        if (isDoubleBonusActive == 1) 
+		if (isDoubleBonusActive == 1) 
         {
         	DoubleBonusButton.interactable = false;
         	BuyForDoubleBonusText.text = "Куплено";
         	ObjectCostOfDoubleBonusText.SetActive(false);
         }
+
+        else if (coins < CostOfDoubleBonus) 
+        {
+        	DoubleBonusButton.interactable = false;
+        }
+
+        else
+        {
+        	DoubleBonusButton.interactable = true;
+        	BuyForDoubleBonusText.text = "Купить за";
+        	ObjectCostOfDoubleBonusText.SetActive(true);
+        }
     }
 
     public void CheckForFinishDoubleBonusTasks() //Проверка на выполнение 10 заданий при купленом бонусе
     {
-    	DataTable playerboard = MyDataBaseConnection.GetTable("SELECT * FROM Shop;");
-    	
-    	if (Convert.ToInt32(MyDataBaseConnection.ExecuteQueryWithAnswer($"SELECT isDoubleCoinsBonusActive FROM Shop WHERE id = {CurrentUser};")) == 1 && PlayerPrefs.GetInt("DoubleBonusFinishTasks") >= 10) 
+    	if (isDoubleBonusActive == 1 && PlayerPrefs.GetInt("DoubleBonusFinishTasks") >= 10) 
     	{
+    		DataTable playerboard = MyDataBaseConnection.GetTable("SELECT * FROM Shop;");
+
     		EffectOfThunder.SetActive(false);
 
     		NotifFinishDoubleBonusPanel.SetActive(true);

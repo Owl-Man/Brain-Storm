@@ -112,8 +112,6 @@ public class DataBaseProfil : MonoBehaviour
     public InputField NewUserYearsOldEnter;
     public InputField NewUserClassEnter;
 
-//Тот кто открыл этот скрипт даун
-
     private void Start() 
     {
 
@@ -900,7 +898,7 @@ public class DataBaseProfil : MonoBehaviour
     {
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(0.36f);
+        yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(scene);
     }
@@ -913,8 +911,6 @@ public class DataBaseProfil : MonoBehaviour
 
         if (CountOfAllUsers == 0) 
         {
-            User1NameExit.text = MyDataBaseConnection.ExecuteQueryWithAnswer($"SELECT NamePlayer FROM PlayerStats WHERE id = {1};");
-
             UsersButtons[0].SetActive(false);
             UsersButtons[1].SetActive(false);
             UsersButtons[2].SetActive(false);
@@ -937,6 +933,8 @@ public class DataBaseProfil : MonoBehaviour
             UsersButtons[3].SetActive(false);
             UsersButtons[4].SetActive(false);
         }
+
+
         if (CountOfAllUsers == 2) 
         {
             NewUserButton.SetActive(true);
@@ -950,6 +948,7 @@ public class DataBaseProfil : MonoBehaviour
             UsersButtons[3].SetActive(false);
             UsersButtons[4].SetActive(false);
         }
+
         if (CountOfAllUsers == 3) 
         {
             NewUserButton.SetActive(true);
@@ -964,6 +963,7 @@ public class DataBaseProfil : MonoBehaviour
             UsersButtons[3].SetActive(false);
             UsersButtons[4].SetActive(false);
         }
+
         if (CountOfAllUsers == 4) 
         {
             NewUserButton.SetActive(true);
@@ -979,6 +979,7 @@ public class DataBaseProfil : MonoBehaviour
             UsersButtons[3].SetActive(true);
             UsersButtons[4].SetActive(false);
         }
+
         if (CountOfAllUsers == 5) 
         {
             NewUserButton.SetActive(false);
