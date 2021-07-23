@@ -6,7 +6,7 @@ using System.Data;
 using Mono.Data.Sqlite;
 using System.IO;
 
-// <---------------------------------------------ALL CALCULATIONS PROCESSES TAKE PLACE HERE------------------------------------------------->
+// <--------------------------------ALL CALCULATIONS PROCESSES TAKE PLACE HERE--------------------------->
 public static class LevelsDataBase
 {
 	public static int choose_right_answer;
@@ -29,7 +29,7 @@ public static class LevelsDataBase
 
     public static string question_text;
 
-//<-------------------------------------------CONDITIONS FOR TASK GENERATE----------------------------------------->
+//<--------------------------------CONDITIONS FOR TASK GENERATE--------------------------------->
 	public static void Level1()
 	{
 		isTaskString = false;
